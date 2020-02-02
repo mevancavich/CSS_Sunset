@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#main{
+    height: 600px;
+}
+
+#sky{
+    top: 0;
+    width: 100%;
+    height: 460px;
+    background-color: rgb(135, 206, 235);
+    animation-name: nightfall;
+    animation-duration: 10s;
+}
+
+#sun{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: rgb(253, 184, 19);
+    top: 10px;
+    left: 10px;
+    position: relative;
+    animation-name: settingSun;
+    animation-duration: 10s;
+}
+
+#moon{
+    height: 75px;
+    width: 75px;
+    top: 20px;
+    left: 1000px;
+    border-radius: 50px;
+    background-color: rgba(245, 243, 206, 1.0);
+    position: absolute;
+    animation-name: moonrise;
+    animation-duration: 5s;
+}
+
+#ocean{
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(0, 41, 58);
+    position: absolute;
+}
+
+@keyframes nightfall{
+    0%{
+        background-color: rgb(135, 206, 235);
+    }
+    25%{
+        background-color: rgb(100, 149, 237);
+    }
+    50%{
+        background-color: rgb(80, 100, 200);
+    }
+    75%{
+        background-color: rgb(50, 70, 170);
+    }
+    100%{
+        background-color: rgb(25, 40, 130);
+    }
+}
+
+@keyframes settingSun{
+    from{top: 10px; left: 10px;}
+    to{top: 460px; left: 800px;}
+}
+
+@keyframes moonrise{
+    0%{
+        background-color: rgba(245, 243, 206, 0.0);
+    }
+    20%{
+        background-color: rgba(245, 243, 206, 0.1);
+    }
+    40%{
+        background-color: rgba(245, 243, 206, 0.1);
+    }
+    60%{
+        background-color: rgba(245, 243, 206, 0.3);
+    }
+    80%{
+        background-color: rgba(245, 243, 206, 0.5);
+    }
+    100%{
+        background-color: rgba(245, 243, 206, 1.0);
+    }    
+}
+@media screen and (max-width: 1078px){
+    #moon{
+        left: 900px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #moon{
+        left: 800px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    #moon{
+        left: 700px;
+    }
+}
+
+@media screen and (max-width: 785px){
+    #moon{
+        left: 600px;
+    }
+
+    @keyframes settingSun{
+        from{top: 10px; left: 10px;}
+        to{top: 460px; left: 700px;}
+    }
+}
+
+@media screen and (max-width: 685px){
+    #moon{
+        left: 500px;
+    }
+
+    @keyframes settingSun{
+        from{top: 10px; left: 10px;}
+        to{top: 460px; left: 600px;}
+    }
+}
+
+@media screen and (max-width: 580px){
+    #moon{
+        left: 400px;
+    }
+
+    @keyframes settingSun{
+        from{top: 10px; left: 10px;}
+        to{top: 460px; left: 550px;}
+    }
+}
+
+@media screen and (max-width: 480px){
+    #moon{
+        left: 350px;
+    }
+
+    @keyframes settingSun{
+        from{top: 10px; left: 10px;}
+        to{top: 460px; left: 420px;}
+    }
+}
+
+@media screen and (max-width: 430px){
+    #moon{
+        left: 300px;
+    }
+
+    @keyframes settingSun{
+        from{top: 10px; left: 10px;}
+        to{top: 460px; left: 400px;}
+    }
+}
